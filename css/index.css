@@ -1,0 +1,165 @@
+html, body, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+  margin: 0;
+}
+
+.container {
+    width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.left-container {
+    width: 30vw;
+    height: 100vh;
+    position: relative;
+}
+
+.right-container {
+    height: 100vh;
+    width: 70vw;
+    background: ghostwhite;
+    overflow: scroll;
+}
+
+.page-photo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.text-container {
+    position: absolute;
+    top: 25%;
+    right: 50%;
+    font-size: 3rem;
+    transform: translate(50%, 0);
+    padding: 20%;
+    background: rgba(0, 0, 0, .4);
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+}
+
+.text-on-page-photo {
+    color: white;
+    opacity: .9;
+    font-family: 'Ancient', sans-serif;
+}
+
+.description{
+  padding: 40px;
+  padding-top: 120px;
+  padding-right: 120px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.sign-up-bar{
+  margin: 0;
+  margin-top: 20px;
+  background: white;
+  height: fit-content;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 2px 2px 5px .5px rgba(0, 0, 0, .4);
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+
+.row > div:nth-child(even){
+  padding-left: 40px;
+}
+input:invalid:required{
+outline: 2px solid red;
+} 
+input{
+  max-width: 20vw;
+  padding: 8px;
+  padding-right: 14px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+input:hover, input:focus{
+  outline: 2px solid dodgerblue;
+}
+
+
+
+
+label{
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.form-h2{
+  margin: 10px;
+}
+
+.submit-btn-container{
+  padding: 30px;
+}
+
+.submit-btn-container > button{
+  padding: 10px 30px 10px 30px;
+  background: darkgreen;
+  color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.submit-btn-container > button:hover, .already-hv-account > span:hover{
+  opacity: .8;
+}
+
+.already-hv-account{
+  font-weight: 400;
+}
+
+.already-hv-account > span{
+  color: darkgreen;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  input{
+    font-size: 1rem;
+    display: block;
+    min-width: 50vw;
+    border: 2px solid rgba(0, 0, 0, .5);
+  }
+  
+  label{
+    font-size: .8rem;
+    color: rgba(0, 0, 0, .8);
+  }
+  
+  .row {
+    display: block;
+  }
+  
+  .row > div:nth-child(even){
+    padding: 0px;
+    margin: 0;
+  }
+  
+  .description{
+    font-size: 1rem;
+  }
+}
